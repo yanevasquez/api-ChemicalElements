@@ -14,7 +14,7 @@ $ git clone https://github.com/yanevasquez/api-ChemicalElements
 ##### 3. Rode o script de instalação de dependências:
 
 ```bash
-$ sh setup.sh
+$ sh install.sh
 ```
 ##### Ao término do script, o servidor do laravel irá indicar o link:
 
