@@ -1,26 +1,32 @@
 # api-ChemicalElements
 
-##### 1. Pelo terminal crie um diretório:
-
+##### 1. Crie um diretório e faça o clone do repositório:
 ```bash
 $ mkdir nome-do-diretorio
 $ cd nome-do-diretorio
+$ git clone https://github.com/yanevasquez/api-ChemicalElements.git
 ```
-##### 2. Dentro do diretório criado faça o clone do repositório:
-
+##### 2. Crie a base de dados: 
 ```bash
-$ git clone https://github.com/yanevasquez/api-ChemicalElements
+$ mysql -u root -p 
+> create database nomedobanco;
 ```
-##### 3. Rode o script de instalação de dependências:
+##### 3. Copie o arquivo .env.example para o .env:
+```bash
+$ cp .env.example .env
+```
+##### 4. Configure os paramêtros no arquivo .env: 
+```
+DB_DATABASE=nomedobanco
+DB_USERNAME=root
+DB_PASSWORD=sua_senha_de_usario_root
+```
+##### 5. Rode o script de instalação de dependências:
 
 ```bash
 $ sh install.sh
 ```
-##### Ao término do script, o servidor do laravel irá indicar o link:
-
-> *Laravel development server started: http://localhost:3000* 
-
-##### 4. Use o endereço no seu navegador setando O URI:
+##### 4. O servidor do laravel irá informar um endereço, de acordo com a ação do endpoint altere o URI:
 
 http://localhost:3000/
 
@@ -34,4 +40,4 @@ POST        |  ...         | ...
 PUT/PATCH   |  ...         | ...
 DELETE      |  ...         | ...
       
-### *Em andamento* 
+*Em andamento* 
