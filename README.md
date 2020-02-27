@@ -32,12 +32,12 @@ http://localhost:3000/
 
 #### API Endpoints:
 
-Método HTTP | URI          | Ação
-:---------  |:------------:|:----------------------------------:
-GET/HEAD    | api/elements |    retorna todos os elementos químicos
-GET/HEAD    |  ...         | ...
-POST        |  ...         | ...
-PUT/PATCH   |  ...         | ...
-DELETE      |  ...         | ...
+Método HTTP | URI               | Ação
+:---------  |:------------:     |:----------------------------------:
+GET/HEAD    | api/elements      |   retorna todos os elementos químicos
+GET/HEAD    | api/elements/{id} |   retorna um elemento especifíco
+POST        | api/elements      |   cria um novo elemento
+PUT/PATCH   |  ...              | ...
+DELETE      | api/elments/{id}  |   exclui um elemento específico
       
 *Em andamento* 
