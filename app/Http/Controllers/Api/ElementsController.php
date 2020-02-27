@@ -52,7 +52,11 @@ class ElementsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $element=Element::findOrAbort($id);
+        $element->fill($request->only(['name', 'symbol','wight']));
+        $element->save();
+
+        return $element;
     }
 
     /**
@@ -69,3 +73,4 @@ class ElementsController extends Controller
         return \Response::json(['sucess'=> true]);
     }
 }
+ 
