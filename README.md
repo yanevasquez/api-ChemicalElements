@@ -26,18 +26,18 @@ DB_PASSWORD=sua_senha_de_usario_root
 ```bash
 $ sh install.sh
 ```
-##### 4. O servidor do laravel irá informar um endereço, de acordo com a ação do endpoint altere o URI:
+##### 6. O servidor do laravel irá informar um endereço, de acordo com a ação do endpoint altere o URI:
 
 http://localhost:3000/
 
 #### API Endpoints:
 
 Método HTTP | URI               | Ação
-:---------:  |:------------:     |:----------------------------------:
+:---------: |------------       | -----------------------------------------
 GET/HEAD    | api/elements      |   retorna todos os elementos químicos
-GET/HEAD    | api/elements/{id} |   retorna um elemento especifíco
-POST        | api/elements      |   cria um novo elemento
+GET/HEAD    | api/elements/{id} |   retorna um elemento químico especifíco
+POST        | api/elements      |   cria um novo elemento químico
 PUT/PATCH   | api/elements/{id} |   atualiza um elemento químico existente
-DELETE      | api/elments/{id}  |   exclui um elemento específico
+DELETE      | api/elements/{id} |   exclui um elemento químico específico
       
 *Em andamento* 
