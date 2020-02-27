@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ElementsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of chemical elements
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,48 +20,29 @@ class ElementsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Store a newly created Element in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $element= new Element($request->all());
+        $element=save();
+        return $element;
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified Element
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        return Element::findOrAbort($id);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
+    
     /**
      * Update the specified resource in storage.
      *
@@ -82,6 +63,9 @@ class ElementsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $element=Element::findOrAbout($id);
+        $element->delete();
+
+        return \Response::json(['sucess'=> true]);
     }
 }
