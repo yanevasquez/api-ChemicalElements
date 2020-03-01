@@ -9,7 +9,7 @@ class Element extends Model
 {
     protected $table = "chemical_element";
     public $timestamps = false;
-    protected $fillable = ['name', 'symbol', 'weight'];
+    protected $fillable = ['name', 'symbol','atomicNumber','weight'];
 
     public static function findOrAbort($id){
         if (!$element = Element::find($id)) {
