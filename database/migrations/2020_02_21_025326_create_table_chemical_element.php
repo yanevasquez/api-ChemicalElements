@@ -17,6 +17,7 @@ class CreateTableChemicalElement extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('symbol');
+            $table->double('atomicNumber',15, 8);
             $table->double('weight',15, 8);
         });
     }
