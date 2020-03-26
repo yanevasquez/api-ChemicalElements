@@ -28,7 +28,7 @@ class ElementsController extends Controller
     public function store(Request $request)
     {
         $element= new Element($request->all());
-        $element=save();
+        $element->save();
         return $element;
     }
 
@@ -67,7 +67,7 @@ class ElementsController extends Controller
      */
     public function destroy($id)
     {
-        $element=Element::findOrAbout($id);
+        $element=Element::findOrAbort($id);
         $element->delete();
 
         return \Response::json(['sucess'=> true]);
